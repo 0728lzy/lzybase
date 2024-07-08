@@ -3,11 +3,13 @@ plugins {
     alias(libs.plugins.jetbrains.kotlin.android)
     id("maven-publish")
 }
+group = "com.lazyliuzy.lzybase"
+version = "1.0"
 
 android {
     namespace = "com.lazyliuzy.commonbase"
     compileSdk = 34
-
+    //1
     defaultConfig {
         minSdk = 21
 
@@ -49,13 +51,13 @@ android {
                 }
 
                 // 创建一个名为 "debug" 的 Maven 发布
-                register("debug", MavenPublication::class) {
-                    // 应用 debug 构建变体的组件
-                    from(components["debug"])
-                    groupId = "com.lazyliuzy.lzybase"
-                    artifactId = "commonbase"
-                    version = "1.0"
-                }
+//                register("debug", MavenPublication::class) {
+//                    // 应用 debug 构建变体的组件
+//                    from(components["debug"])
+//                    groupId = "com.lazyliuzy.lzybase"
+//                    artifactId = "commonbase"
+//                    version = "1.0"
+//                }
             }
         }
     }
